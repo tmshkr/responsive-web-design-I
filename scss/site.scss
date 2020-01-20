@@ -81,22 +81,14 @@ header#top {
   }
   @media (max-width: $breakpoint-mobile) {
     padding: 0;
-    background: none;
-    nav,
-    button {
-      margin: -1px 0; // to fix Safari iOS bug
-    }
     > a {
-      background: #fff;
-      background: rgba(255, 255, 255, 0.95);
       flex: 0 0 100%;
       padding: 0.5rem 0;
       text-align: center;
       z-index: 1;
     }
     button {
-      background: #dedede;
-      background: rgba(222, 222, 222, 0.95);
+      background: #dedede42;
       border: 0;
       padding: 0;
       z-index: 1;
@@ -111,20 +103,8 @@ header#top {
         }
       }
     }
-    nav {
-      background: #fff;
-      opacity: 0;
-      transform: translateY(-100%);
-      transition: 0.25s ease-out;
-      visibility: hidden;
-      z-index: 0;
-    }
     &.menu-open {
-      > a {
-        background: #fff;
-      }
       button {
-        background: #dedede;
         svg {
           &:first-child {
             display: inline;
@@ -135,9 +115,7 @@ header#top {
         }
       }
       nav {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
+        display: block;
       }
     }
   }
@@ -150,12 +128,12 @@ header#top {
       margin: 0 1rem;
     }
     @media (max-width: $breakpoint-mobile) {
-      display: block;
+      display: none;
     }
     a {
-      padding: 1rem 0.5rem;
-      font-size: 0.9em;
       color: #555;
+      font-size: 0.9em;
+      padding: 1rem 0.5rem;
       text-decoration: none;
       @media (max-width: $breakpoint-mobile) {
         display: block;
@@ -165,6 +143,9 @@ header#top {
       &:first-child {
         border-top: none;
         padding-left: 0;
+        @media (max-width: $breakpoint-mobile) {
+          padding-left: 0.5rem;
+        }
       }
       &:last-child {
         @media (max-width: $breakpoint-tablet) {

@@ -1,6 +1,8 @@
+@use "variables" as *;
+
 section {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   margin: 2rem 0;
 }
 
@@ -11,6 +13,11 @@ section#hero {
   align-items: center;
   > div {
     margin: 3rem 0;
+    &:last-child {
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
+      }
+    }
   }
   h1 {
     font-size: 72px;
@@ -26,7 +33,7 @@ section#hero {
 }
 
 section.above-fold > article {
-  flex: 1 1 430px;
+  flex: 1 1 230px;
 }
 section.below-fold > article {
   flex: 1 1 286px;
@@ -34,6 +41,7 @@ section.below-fold > article {
 
 article {
   padding-right: 1rem;
+  margin: 1rem 0;
 }
 
 img.middle-img {

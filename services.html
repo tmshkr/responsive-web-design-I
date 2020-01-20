@@ -53,9 +53,11 @@
           e.stopPropagation();
           topHeader.classList.add("menu-open");
           __isMenuOpen = true;
+          document.body.style.cursor = "pointer";
           document.onclick = function() {
             topHeader.classList.remove("menu-open");
             __isMenuOpen = false;
+            document.body.style.cursor = null;
             document.onclick = null;
           };
         }

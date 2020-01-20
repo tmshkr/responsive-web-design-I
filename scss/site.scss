@@ -1,6 +1,8 @@
-// * {
-//   outline: 1px solid cyan;
-// }
+@use "variables" as *;
+
+* {
+  outline: 1px solid cyan;
+}
 
 html,
 body {
@@ -50,6 +52,9 @@ main {
 
 header#top {
   display: flex;
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
@@ -60,6 +65,9 @@ header#top {
   background: #fff;
   background: rgba(255, 255, 255, 0.95);
   nav a {
+    @media (max-width: $breakpoint-mobile) {
+      display: block;
+    }
     padding: 1rem;
     font-size: 0.9em;
     color: #bebebe;

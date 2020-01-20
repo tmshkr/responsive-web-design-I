@@ -52,9 +52,6 @@ main {
 
 header#top {
   display: flex;
-  @media (max-width: $breakpoint-tablet) {
-    display: block;
-  }
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
@@ -64,17 +61,30 @@ header#top {
   max-width: 900px;
   background: #fff;
   background: rgba(255, 255, 255, 0.95);
-  nav a {
-    @media (max-width: $breakpoint-mobile) {
-      display: block;
+  @media (max-width: $breakpoint-tablet) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  nav {
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      padding: 1rem 0.5rem;
+      font-size: 0.9em;
+      color: #bebebe;
+      text-decoration: none;
+      @media (max-width: $breakpoint-mobile) {
+        display: block;
+      }
     }
-    padding: 1rem;
-    font-size: 0.9em;
-    color: #bebebe;
-    text-decoration: none;
   }
   img {
     padding-right: 1rem;
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0;
+    }
   }
 }
 

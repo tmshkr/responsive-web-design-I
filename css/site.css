@@ -48,11 +48,6 @@ main {
     margin-top: 6rem;
   }
 }
-@media (max-width: 500px) {
-  main {
-    margin-top: 4rem;
-  }
-}
 
 header#top {
   display: flex;
@@ -66,6 +61,18 @@ header#top {
   background: #fff;
   background: rgba(255, 255, 255, 0.95);
 }
+header#top > a {
+  flex: 0 0 183px;
+  margin-right: 1rem;
+}
+@media (max-width: 800px) {
+  header#top > a {
+    margin-right: 0;
+  }
+}
+header#top button {
+  display: none;
+}
 @media (max-width: 800px) {
   header#top {
     flex-wrap: wrap-reverse;
@@ -74,6 +81,53 @@ header#top {
   }
 }
 @media (max-width: 500px) {
+  header#top {
+    padding: 0;
+    background: none;
+  }
+  header#top nav,
+header#top button {
+    margin: -1px 0;
+  }
+  header#top > a {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    flex: 0 0 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+    z-index: 1;
+  }
+  header#top button {
+    background: #dedede;
+    background: rgba(222, 222, 222, 0.95);
+    border: 0;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+  }
+  header#top button svg {
+    width: 1rem;
+    height: auto;
+    fill: #bebebe;
+  }
+  header#top button svg:first-child {
+    display: none;
+  }
+  header#top nav {
+    background: #fff;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 0.25s ease-out;
+    visibility: hidden;
+    z-index: 0;
+  }
+  header#top.menu-open > a {
+    background: #fff;
+  }
+  header#top.menu-open button {
+    background: #dedede;
+  }
   header#top.menu-open button svg:first-child {
     display: inline;
   }
@@ -81,7 +135,9 @@ header#top {
     display: none;
   }
   header#top.menu-open nav {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
   }
 }
 header#top nav {
@@ -97,9 +153,6 @@ header#top nav {
 }
 @media (max-width: 500px) {
   header#top nav {
-    display: none;
-  }
-  header#top nav.menu-open {
     display: block;
   }
 }
@@ -117,40 +170,12 @@ header#top nav a {
   }
 }
 header#top nav a:first-child {
+  border-top: none;
   padding-left: 0;
 }
 @media (max-width: 800px) {
   header#top nav a:last-child {
     padding-right: 0;
-  }
-}
-header#top button {
-  background: #dedede42;
-  border: 0;
-  display: none;
-  padding: 0;
-}
-@media (max-width: 500px) {
-  header#top button {
-    display: block;
-    width: 100%;
-  }
-}
-header#top button svg {
-  width: 1rem;
-  height: auto;
-  fill: #bebebe;
-}
-header#top button svg:first-child {
-  display: none;
-}
-header#top > a {
-  flex: 0 0 183px;
-  margin-right: 1rem;
-}
-@media (max-width: 800px) {
-  header#top > a {
-    margin-right: 0;
   }
 }
 

@@ -9,26 +9,25 @@ section#hero {
   text-align: center;
   justify-content: space-around;
   align-items: center;
-}
-section#hero > div {
-  margin: 3rem 0;
-}
-section#hero h1 {
-  font-size: 72px;
-  max-width: 100%;
-}
-section#hero button {
-  padding: 0.25rem 1rem;
-  font-size: 0.9rem;
-  color: #777;
-  background: none;
-  border: 1px solid #555;
+  > div {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 72px;
+    max-width: 100%;
+  }
+  button {
+    padding: 0.25rem 1rem;
+    font-size: 0.9rem;
+    color: #777;
+    background: none;
+    border: 1px solid #555;
+  }
 }
 
 section.above-fold > article {
   flex: 1 1 430px;
 }
-
 section.below-fold > article {
   flex: 1 1 286px;
 }
@@ -40,5 +39,3 @@ article {
 img.middle-img {
   width: 100%;
 }
-
-/*# sourceMappingURL=index.css.map */

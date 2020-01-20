@@ -1,8 +1,8 @@
 @use "variables" as *;
 
-* {
-  outline: 1px solid cyan;
-}
+// * {
+//   outline: 1px solid cyan;
+// }
 
 html,
 body {
@@ -46,8 +46,14 @@ body {
 }
 
 main {
-  margin: 3rem 0;
+  margin: 4rem 0;
   padding: 1rem;
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 6rem;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 4rem;
+  }
 }
 
 header#top {
@@ -103,14 +109,20 @@ header#top {
       @media (max-width: $breakpoint-mobile) {
         display: block;
         text-align: center;
+        border-top: 1px solid #bebebe;
       }
       &:first-child {
         padding-left: 0;
       }
+      &:last-child {
+        @media (max-width: $breakpoint-tablet) {
+          padding-right: 0;
+        }
+      }
     }
   }
   button {
-    background: none;
+    background: #dedede42;
     border: 0;
     display: none;
     padding: 0;
@@ -130,6 +142,9 @@ header#top {
   > a {
     flex: 0 0 183px;
     margin-right: 1rem;
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: 0;
+    }
   }
 }
 

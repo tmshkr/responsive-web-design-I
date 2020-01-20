@@ -1,8 +1,8 @@
 @use "variables" as *;
 
-// * {
-//   outline: 1px solid cyan;
-// }
+* {
+  outline: 1px solid cyan;
+}
 
 html,
 body {
@@ -54,7 +54,7 @@ header#top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -82,7 +82,7 @@ header#top {
     }
   }
   nav {
-    margin: 1rem;
+    margin: 0 1rem 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -104,6 +104,9 @@ header#top {
         display: block;
         text-align: center;
       }
+      &:first-child {
+        padding-left: 0;
+      }
     }
   }
   button {
@@ -124,11 +127,9 @@ header#top {
       }
     }
   }
-  img {
-    padding-right: 1rem;
-    @media (max-width: $breakpoint-tablet) {
-      padding: 0;
-    }
+  > a {
+    flex: 0 0 183px;
+    margin-right: 1rem;
   }
 }
 

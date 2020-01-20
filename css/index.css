@@ -1,0 +1,44 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+section#hero {
+  align-items: center;
+  flex: 1 0 50%;
+  justify-content: space-around;
+  margin: 0;
+  text-align: center;
+}
+section#hero > div {
+  margin: 3rem 0;
+}
+@media (max-width: 800px) {
+  section#hero > div:last-child {
+    display: none;
+  }
+}
+section#hero h1 {
+  font-size: 72px;
+  max-width: 100%;
+}
+section#hero button {
+  padding: 0.25rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  background: none;
+  border: 1px solid #555;
+}
+
+article {
+  flex: 1 1 250px;
+  padding-right: 1rem;
+  margin: 1rem 0;
+}
+
+img.middle-img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

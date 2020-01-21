@@ -1,16 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Great Idea - Responsive I</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Great Idea!</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-<!-- Use past code you created here for Great Idea Web Page or past solution for Great Idea Web Page HTML here! -->
-</body>
+  <body>
+    <header id="top">
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="#">Product</a>
+        <a href="#">Vision</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <button id="menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+          />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+          />
+        </svg>
+      </button>
+      <a href="index.html">
+        <img class="logo" src="img/logo.png" alt="Great Idea! Company logo." />
+      </a>
+      <script>
+        var topHeader = document.getElementById("top");
+        var __isMenuOpen = false;
+        document.getElementById("menu-button").onclick = handleMenu;
+        function handleMenu(e) {
+          if (__isMenuOpen) return;
+          e.stopPropagation();
+          topHeader.classList.add("menu-open");
+          __isMenuOpen = true;
+          document.body.style.cursor = "pointer";
+          document.onclick = function() {
+            topHeader.classList.remove("menu-open");
+            __isMenuOpen = false;
+            document.body.style.cursor = null;
+            document.onclick = null;
+          };
+        }
+      </script>
+    </header>
+    <main>
+      <section id="hero">
+        <div>
+          <h1>
+            Innovation <br />On<br />
+            Demand
+          </h1>
+          <button>Get Started</button>
+        </div>
+        <div>
+          <img src="img/hero-img.png" alt="Image of a code snippet." />
+        </div>
+      </section>
+      <hr />
+      <section class="above-fold">
+        <article>
+          <h2>Features</h2>
+          <p>
+            Aliquam elementum magna eros, ac posuere elvit tempus et.
+            Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu
+            ornare nisl. Nullam convallis augue justo, at imperdiet metus
+            scelerisque quis.
+          </p>
+        </article>
+        <article>
+          <h2>About</h2>
+          <p>
+            Aliquam elementum magna eros, ac posuere elvit tempus et.
+            Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu
+            ornare nisl. Nullam convallis augue justo, at imperdiet metus
+            scelerisque quis.
+          </p>
+        </article>
+      </section>
+      <img
+        class="middle-img"
+        src="img/mid-page-accent.jpg"
+        alt="Image of code snippets across the screen"
+      />
+      <section class="below-fold">
+        <article>
+          <h2>Services</h2>
+          <p>
+            Aliquam elementum magna eros, ac posuere elvit tempus et.
+            Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu
+            ornare nisl. Nullam convallis augue justo, at imperdiet metus
+            scelerisque quis.
+          </p>
+        </article>
+        <article>
+          <h2>Product</h2>
+          <p>
+            Aliquam elementum magna eros, ac posuere elvit tempus et.
+            Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu
+            ornare nisl. Nullam convallis augue justo, at imperdiet metus
+            scelerisque quis.
+          </p>
+        </article>
+        <article>
+          <h2>Vision</h2>
+          <p>
+            Aliquam elementum magna eros, ac posuere elvit tempus et.
+            Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu
+            ornare nisl. Nullam convallis augue justo, at imperdiet metus
+            scelerisque quis.
+          </p>
+        </article>
+      </section>
+
+      <hr />
+      <footer>
+        <h2>Contact</h2>
+        <address>
+          <p>123 Way 456 Street</p>
+          <p>Somewhere, USA</p>
+        </address>
+        <p class="phone-number">(888) 888-8888</p>
+        <p>sales@greatidea.io</p>
+        <small>Copyright Great Idea! 2020</small>
+      </footer>
+    </main>
+  </body>
 </html>
